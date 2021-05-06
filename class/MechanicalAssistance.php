@@ -2,6 +2,5 @@
 class MechanicalAssistance 
  extends SupportVessel {
 
-   
 }
 ?>
