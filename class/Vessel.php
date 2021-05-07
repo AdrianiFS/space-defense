@@ -2,22 +2,25 @@
 class Vessel {
   
 private $startPosition = ['x'=> 0, 'y' => 0];
+private $endPosition = ['x'=> 0, 'y' => 0];
 private $name = "";
 
-public function __construct($name )
-{
+public function __construct($name  ){
   $this->name = $name;
 }
 
-  public static function getMove($coord) {
-    return $coord;
+/**
+ * @param
+ */ 
+public static function getMoveOrder($coord){
+
   }
 
 /**
  * Get the value of startPosition
  */ 
-public function getStartPosition()
-{
+public function getStartPosition(){
+
 return $this->startPosition;
 }
 
@@ -26,11 +29,10 @@ return $this->startPosition;
  *
  * @return  self
  */ 
-public function setStartPosition($startPosition)
-{
-  // var_dump($startPosition['x']);
+public function setStartPosition($startPosition){
   if($startPosition['x'] >= 0 && $startPosition['x'] <= 100 ){
     if($startPosition['y'] >= 0 && $startPosition['y'] <= 100 ){
+      $this->startPosition = $startPosition;
       return $startPosition;
     }else{
       echo 'Erreur Position Y choisi:'. $startPosition['y'];
@@ -46,8 +48,7 @@ public function setStartPosition($startPosition)
 /**
  * Get the value of name
  */ 
-public function getName()
-{
+public function getName(){
 return $this->name;
 }
 
@@ -59,6 +60,26 @@ return $this->name;
 public function setName($name)
 {
 $this->name = $name;
+
+return $this;
+}
+
+/**
+ * Get the value of endPosition
+ */ 
+public function getEndPosition()
+{
+return $this->endPosition;
+}
+
+/**
+ * Set the value of endPosition
+ *
+ * @return  self
+ */ 
+public function setEndPosition($endPosition)
+{
+$this->endPosition = $endPosition;
 
 return $this;
 }

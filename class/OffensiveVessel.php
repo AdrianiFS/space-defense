@@ -14,7 +14,6 @@ class OffensiveVessel extends Vessel {
     return $this->coord;
   }
   
-
     /**
      * Get the value of cannons
      */ 

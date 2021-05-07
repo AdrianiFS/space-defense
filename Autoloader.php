@@ -1,20 +1,20 @@
 <?php
 /**
- * Class Autoloader
+ *  Autoloader Class
  */
  
 class Autoloader{
 
     /**
-     * Enregistre notre autoloader
+     * Register Autoleader
      */
     static function register(){
         spl_autoload_register(array(__CLASS__, 'autoload'));
     }
 
     /**
-     * Inclue le fichier correspondant à notre classe
-     * @param $class string Le nom de la classe à charger
+     * Include file to our class
+     * @param 
      */
     static function autoload($class){
         require 'class/' . $class . '.php';

@@ -1,0 +1,18 @@
+#mainContainer {
+    background-color: rgba(0, 81, 255, 0.568);
+    margin: 0px;
+    padding: 0px;
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 0.1px;
+    border-color:rgba(0, 0, 0, 0.616);
+    width: 10px;
+    height: 10px;
+}
